@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src= "Incometax.js">
+        
+        </script>
+  </head>
+  <body>
+    <form>
+      <label for="status">Marital Status:</label>
+      <select name="status" id="status">
+        <option value="married">Married</option>
+         <option value="unmarried">Unmarried</option>
+      </select>
+<br> </br>
+
+
+      <label for="status">Month/Year:</label>
+      <select name="status" id="status">
+        <option value="yearly">Yearly</option>
+         <option value="monthly">Monthly</option>
+      </select>
+      <br> </br>
+
+      <br>
+      <label for="salary">Salary:</label>
+      <input type="number" id="salary" name="salary" />
+    </br>
+    <br>
+      <label for ="TaxRate">Tax Rate</label>
+      <input type="number" id ="TaxRate" />
+    
+</br>
+<br> </br>
+      <button id="btn" type="button" onclick="getTax()">Calculate Tax</button>
+      <br>
+      <label for="salary">Total Salary after deduction of tax:</label>
+      <input type="number" id="salary" name="salary" /><br /><br />
+
+    </form>
+  </body>
+</html>
