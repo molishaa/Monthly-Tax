@@ -3,6 +3,7 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src= "Incometax.js">
         
@@ -18,31 +19,52 @@
 <br> </br>
 
 
-      <label for="status">Month/Year:</label>
+      <!-- <label for="status">Month/Year:</label>
       <select name="status" id="status">
         <option value="yearly">Yearly</option>
          <option value="monthly">Monthly</option>
       </select>
-      <br> </br>
+      <br> </br> -->
 
       <br>
-      <label for="salary">Salary:</label>
-      <input type="number" id="salary" name="salary" />
+      <label for="salary">Monthly Salary:</label>
+      <input type="number" id="salary" name="salary" placeholder="Please enter monthly salary" />
     </br>
    
 <br> </br>
 
       <button id="btn" type="button" onclick="getTax()">Calculate Tax</button>
-      <button id="btn" type="reset" onclick="getTax()">Reset</button>
+      <button id="btn"  onclick="resetButtonFunction()">Reset</button>
       <br>
       <br>
-<label for ="TaxRate">Tax Rate deducted</label>
+<!-- <label for ="TaxRate">Tax Rate deducted</label>
 <input type="number" id ="TaxRate" />
 
 </br>
       <label for="salary">Total Salary after deduction of tax:</label>
-      <input type="number" id="salary" name="salary" /><br /><br />
+      <input type="number" id="salary" name="salary" /><br /><br /> -->
 
     </form>
+
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          
+          <th scope="col">Annual Income</th>
+          <th scope="col">Annual Tax deducted</th>
+          <th scope="col">Monthly Tax deducted</th>
+          <th scope="col">Cash in hand(Monthly)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="annualIncome"> 0</td> 
+          <td id="annualTaxDeducted">0</td>
+          <td id="monthlyTaxDeducted">0</td>
+          <td id="cashInHand">0</td>
+        </tr>
+        
+      </tbody>
+    </table>
   </body>
 </html>

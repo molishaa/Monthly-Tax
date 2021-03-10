@@ -1,4 +1,14 @@
   
+//function resetButtonFunction(){
+    // alert("Resetting")
+   // document.getElementById("status").reset()
+
+    
+
+//}
+
+
+
 function getTax(){
     let monthlyIncome = document.getElementById("salary").value
     let annualSalary= monthlyIncome*12
@@ -29,7 +39,7 @@ function getTax(){
             Tax  = 400000*0.01 + 100000*0.1 + 200000*0.2 + 1300000*0.3 + (annualSalary - 2000000)*0.36 
            
         }
-        alert(Tax)
+        
     }
      else {
         if(annualSalary <= 450000){
@@ -50,18 +60,13 @@ function getTax(){
      {
          Tax= 450000*0.01 + 100000*0.1 +200000*0.2 + 1250000*0.3 +  (annualSalary -2000000)*0.36
      }
-     alert(Tax)
+  
      }
+
+      document.getElementById("annualIncome").innerHTML=annualSalary
+      document.getElementById("annualTaxDeducted").innerHTML=Tax
+      document.getElementById("monthlyTaxDeducted").innerHTML=Tax/12
+
     
-
-   // document.getElementById("TaxRate").value=Tax
-// <script type = "text/javascript">
-    // var TaxRate = Tax/annualSalary*100
-    // document.write(TaxRate)
-
-    // var annualTax= Tax
-    // document.write(annualTax)
-
-    // var monthlyTax= annualTax/12
-    // document.write(monthlyTax)
+      document.getElementById("cashInHand").innerHTML=monthlyIncome-(Tax/12)
  }
